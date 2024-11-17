@@ -4,8 +4,7 @@ import {
   coordToAddressModelFromJson,
 } from "../models/kakao-map/CoordToAddress";
 
-const baseUrl: string =
-  "https://dapi.kakao.com/v2/local/geo/coord2address.json?";
+const baseUrl: string = "//dapi.kakao.com/v2/local/geo/coord2address.json?";
 
 export default function useMapCoordToAddress(xValue: number, yValue: number) {
   const [address, setAdress] = useState<CoordToAddressModel | null>();

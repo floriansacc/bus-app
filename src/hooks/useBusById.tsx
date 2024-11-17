@@ -4,7 +4,7 @@ import { doc, DocumentSnapshot, getDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 
 // const baseUrl: string =
-// "http://ws.bus.go.kr/api/rest/busRouteInfo/getBusRouteList?";
+// "//ws.bus.go.kr/api/rest/busRouteInfo/getBusRouteList?";
 
 const docName: string = "BusRouteList";
 

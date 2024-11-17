@@ -7,7 +7,7 @@ import { doc, DocumentSnapshot, getDoc, setDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 
 const baseUrl: string =
-  "http://ws.bus.go.kr/api/rest/busRouteInfo/getStaionByRoute?";
+  "//ws.bus.go.kr/api/rest/busRouteInfo/getStaionByRoute?";
 
 const docName: string = "StationsByRouteList";
 
@@ -36,6 +36,7 @@ export default function useStationsByRouteList(busLineQuery: number | null) {
         setStationsList(stationsByRouteListFromJson(dbData.data()));
       } else {
         const fetchUrl = `${baseUrl}${urlParams.toString()}`;
+        console.log(fetchUrl);
         try {
           const response = await fetch(fetchUrl, {
             headers: {
