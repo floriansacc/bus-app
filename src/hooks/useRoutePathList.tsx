@@ -6,7 +6,8 @@ import {
 import { doc, DocumentSnapshot, getDoc, setDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 
-const baseUrl: string = "//ws.bus.go.kr/api/rest/busRouteInfo/getRoutePath?";
+const baseUrl: string =
+  "http://ws.bus.go.kr/api/rest/busRouteInfo/getRoutePath?";
 
 const docName: string = "RoutePathList";
 
