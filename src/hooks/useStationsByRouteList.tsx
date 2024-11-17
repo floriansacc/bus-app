@@ -36,15 +36,15 @@ export default function useStationsByRouteList(busLineQuery: number | null) {
         setStationsList(stationsByRouteListFromJson(dbData.data()));
       } else {
         const fetchUrl = `${baseUrl}${urlParams.toString()}`;
-        console.log(fetchUrl);
         try {
           const response = await fetch(fetchUrl, {
             headers: {
-              // Accept: "application / json",
+              "Content-Type": "application/json",
             },
-            credentials: "include",
+            // credentials: "include",
             method: "GET",
           });
+          console.log(response);
           if (!response.ok) {
             throw new Error(`${response.statusText}`);
           }

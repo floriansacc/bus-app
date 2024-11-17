@@ -8,4 +8,10 @@ dns.setDefaultResultOrder("verbatim");
 export default defineConfig({
   plugins: [react()],
   base: "/bus-app/",
+  server: {
+    cors: {
+      credentials: true,
+      allowedHeaders: "Content-Type,Authorization",
+    },
+  },
 });
